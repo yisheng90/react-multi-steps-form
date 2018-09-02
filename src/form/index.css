@@ -1,0 +1,37 @@
+.form-container {
+    background: linear-gradient(90deg, #273854, #4A385B);
+    min-height: 100vh;
+    min-width: 100vw;
+    color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.navigator-container {
+    padding: 20px;
+    position: fixed;
+    min-width: 80vw;
+    bottom: 0px;
+}
+
+.white-background {
+    background: white;
+    width:100vw;
+}
+
+.itineraries-container {
+    height: 90vh;
+    overflow: scroll;
+}
+
+.btn-outline-gold {
+    color: #f4c188;
+    border: 1px solid !important;
+}
+
+.link {
+    color: #f4c188;
+}
+

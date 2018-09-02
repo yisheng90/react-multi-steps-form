@@ -1,0 +1,12 @@
+.summary-container {
+    padding-top:20px;
+    padding-bottom:30px;
+}
+
+.card {
+    border: none !important;
+}
+
+.card-title {
+    font-weight: bold;
+}
