@@ -17,6 +17,14 @@ class FamilyDetailsForm extends BaseForm {
         }
     }
 
+    componentWillUnmount() {
+        this.props.saveValues({
+            isSpouseTravelling: this.state.isSpouseTravelling,
+            noOfChildren: this.state.noOfChildren,
+            spouseName: this.state.spouseName,
+        })
+    }
+
     validateData(data) {
         if (this.state.isSpouseTravelling === "No") {
             data = (({isSpouseTravelling, noOfChildren}) => ({isSpouseTravelling, noOfChildren}))(data)

@@ -15,9 +15,11 @@ class DropdownField extends BaseField {
         if (!Array.isArray(this.props.options)) return null;
         let options = this.props.options.map((option) => {
             let key = `optionfield-${option}`;
-            return <option value={option} key={key} checked={option === checkedValue}>{option}</option>
+            let isSelected = option == checkedValue ? "selected" : ''
+            return <option value={option} key={key} selected={isSelected}>{option}</option>
         })
-        if (this.props.placeholder) options.unshift(<option value="" key="optionfield-placeholder">{this.props.placeholder}</option>)
+        if (this.props.placeholder) options.unshift(<option value=""
+                                                            key="optionfield-placeholder">{this.props.placeholder}</option>)
         return options;
     }
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import Script from 'react-load-script';
 import BaseField from './baseField'
+
 const key = process.env.REACT_APP_GOOGLE_KEY
 const googleMapURL = `//maps.googleapis.com/maps/api/js?key=${key}&libraries=places`;
 
@@ -11,6 +12,16 @@ class DateField extends BaseField {
         this.id = `${this.props.type}-${this.props.index}`;
         this.handleScriptLoad = this.handleScriptLoad.bind(this);
         this.handleLocationChange = this.handleLocationChange.bind(this);
+    }
+
+    componentDidMount() {
+        let element = document.getElementById(this.id);
+        element.value = this.props.value
+    }
+
+    componentDidUpdate(prevProps, prevState) {
+        let element = document.getElementById(this.id);
+        element.value = this.props.value
     }
 
     handleScriptLoad() {
@@ -32,7 +43,7 @@ class DateField extends BaseField {
             <div className="col-md-4">
                 <Script url={googleMapURL}
                         onLoad={this.handleScriptLoad}/>
-                <input type="text" className="form-control" name={this.props.type} id={this.id}
+                <input type="text" className="form-control" name={this.props.type} id={this.id} key={this.id}
                        placeholder={this.props.label}/>
                 {this.getErrorMessageElement()}
             </div>

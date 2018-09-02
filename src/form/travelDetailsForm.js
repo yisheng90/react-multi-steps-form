@@ -22,6 +22,12 @@ class TravelDetailsForm extends BaseForm {
         this.saveDate = this.saveDate.bind(this);
     }
 
+    componentWillUnmount() {
+        this.props.saveValues({
+            itineraries: this.state.itineraries
+        })
+    }
+
     validateItineraries() {
         let hasError = false
         let itinereries = this.state.itineraries.map((itinerary) => {
@@ -102,7 +108,6 @@ class TravelDetailsForm extends BaseForm {
 
 
     render() {
-        console.log("data", this.state)
         return (
             <div className="form-container">
                 <h1>Your Itineraries</h1>
