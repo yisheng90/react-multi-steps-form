@@ -2,7 +2,7 @@ import React from 'react';
 import Script from 'react-load-script';
 import BaseField from './baseField'
 const key = process.env.REACT_APP_GOOGLE_KEY
-const googleMapURL = `http://maps.googleapis.com/maps/api/js?key=${key}&libraries=places`;
+const googleMapURL = `https://maps.googleapis.com/maps/api/js?key=${key}&libraries=places`;
 
 class DateField extends BaseField {
     constructor(props) {
