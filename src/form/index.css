@@ -7,6 +7,7 @@
     align-items: center;
     flex-direction: column;
     justify-content: center;
+    padding-bottom: 50px;
 }
 
 .navigator-container {
@@ -19,6 +20,12 @@
 .white-background {
     background: white;
     width:100vw;
+}
+
+.voilet-background {
+    background: linear-gradient(90deg, #273854, #4A385B);
+    width:100vw;
+    margin: none;
 }
 
 .itineraries-container {

@@ -102,6 +102,7 @@ class TravelDetailsForm extends BaseForm {
 
 
     render() {
+        console.log("data", this.state)
         return (
             <div className="form-container">
                 <h1>Your Itineraries</h1>

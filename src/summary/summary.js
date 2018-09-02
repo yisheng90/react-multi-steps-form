@@ -44,12 +44,16 @@ class Summary extends Component {
                     </div>
                     <div className="col-md-4">
                         <span className="d-block d-sm-none">Date : {itinerary.date}</span>
+                        <span className="d-none d-sm-block">{itinerary.date}</span>
                     </div>
                     <div className="col-md-4">
                         <span className="d-block d-sm-none">Origin : {itinerary.fromLocation}</span>
+                        <span className="d-none d-sm-block">{itinerary.fromLocation}</span>
                     </div>
                     <div className="col-md-4">
                         <span className="d-block d-sm-none">Destination : {itinerary.toLocation}</span>
+                        <span className="d-none d-sm-block">{itinerary.toLocation}</span>
+
                     </div>
                 </div>
             )
@@ -60,43 +64,46 @@ class Summary extends Component {
 
     render() {
         return (
-            <div className="summary-container container">
-                <h1 className="text-voilet text-center">Summary</h1>
-                <div className="row">
-                    <div className="col-md-6">
-                        <div className="card">
-                            <div className="card-body">
-                                <h5 className="card-title text-gold">Personal Information</h5>
-                                <p>Name: {this.props.data.name}</p>
-                                <p>Email: {this.props.data.email}</p>
-                                <p>Phone Number: {this.props.data.phoneNumber}</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-md-6">
-                        <div className="card">
-                            <div className="card-body">
-                                <h5 className="card-title text-gold">Family Members</h5>
-                                <p>Is Spouse Travelling: {this.props.data.isSpouseTravelling}</p>
-                                {this.displaySpouseNameField()}
-                                <p>No of Children Travelling: {this.props.data.noOfChildren}</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="row">
-                    <div className="col-md-12">
-                        <div className="card">
-                            <div className="card-body">
-                                <h5 className="card-title text-gold">Itineraries</h5>
-                                {this.displayItineraries()}
-                            </div>
-                        </div>
+            <div className="summary-container">
+                <div className="containe">
 
+                    <h1 className="text-voilet text-center">Summary</h1>
+                    <div className="row">
+                        <div className="col-md-6">
+                            <div className="card">
+                                <div className="card-body">
+                                    <h5 className="card-title text-gold">Personal Information</h5>
+                                    <p>Name: {this.props.data.name}</p>
+                                    <p>Email: {this.props.data.email}</p>
+                                    <p>Phone Number: {this.props.data.phoneNumber}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-md-6">
+                            <div className="card">
+                                <div className="card-body">
+                                    <h5 className="card-title text-gold">Family Members</h5>
+                                    <p>Is Spouse Travelling: {this.props.data.isSpouseTravelling}</p>
+                                    {this.displaySpouseNameField()}
+                                    <p>No of Children Travelling: {this.props.data.noOfChildren}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className="col-md-12">
+                            <div className="card">
+                                <div className="card-body">
+                                    <h5 className="card-title text-gold">Itineraries</h5>
+                                    {this.displayItineraries()}
+                                </div>
+                            </div>
+
+                        </div>
                     </div>
                 </div>
-                <div className="navigator-container">
-                    <button className="btn btn-transparent text-voilet" onClick={this.props.restart}>Restart
+                <div className="navigator-container voilet-background">
+                    <button className="btn btn-transparent text-gold" onClick={this.props.restart}>Restart
                     </button>
                 </div>
             </div>

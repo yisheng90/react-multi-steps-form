@@ -10,7 +10,7 @@ class ItineraryField extends Component {
     getRemovalButton() {
         if (this.props.allowRemoval) {
             return (
-                <button className="btn btn-transparent text-gold float-right" onClick={this.props.removeItinerary}>
+                <button className="btn btn-transparent text-gold float-right" data-value={this.props.index} onClick={this.props.removeItinerary}>
                     X
                 </button>);
         }
